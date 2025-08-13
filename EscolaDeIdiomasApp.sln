@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36301.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EscolaDeIdiomasApp.Api", "EscolaDeIdiomasApp\EscolaDeIdiomasApp.Api.csproj", "{B5F54300-9DE9-4494-B436-74405747F61D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Api", "01 - Api", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Domain", "02 - Domain", "{7E5CADD2-3EC3-4A00-9F20-464EB935E8A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Infrastructure", "03 - Infrastructure", "{D4A5B676-DF4C-4E4E-BEBF-FDE8974248DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EscolaDeIdiomasApp.Domain", "EscolaDeIdiomasApp.Domain\EscolaDeIdiomasApp.Domain.csproj", "{3AB15D62-98A4-4227-A5C6-338E33539477}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EscolasDeIdiomasApp.Infra", "EscolasDeIdiomasApp.Infra\EscolasDeIdiomasApp.Infra.csproj", "{F6EE4187-3BDB-4BE2-AD23-AB062260BFC8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{380A7511-A354-6D7A-0CC0-8FA1F1BA7B6C}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5F54300-9DE9-4494-B436-74405747F61D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5F54300-9DE9-4494-B436-74405747F61D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5F54300-9DE9-4494-B436-74405747F61D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5F54300-9DE9-4494-B436-74405747F61D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AB15D62-98A4-4227-A5C6-338E33539477}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AB15D62-98A4-4227-A5C6-338E33539477}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AB15D62-98A4-4227-A5C6-338E33539477}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AB15D62-98A4-4227-A5C6-338E33539477}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6EE4187-3BDB-4BE2-AD23-AB062260BFC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6EE4187-3BDB-4BE2-AD23-AB062260BFC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6EE4187-3BDB-4BE2-AD23-AB062260BFC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6EE4187-3BDB-4BE2-AD23-AB062260BFC8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B5F54300-9DE9-4494-B436-74405747F61D} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{3AB15D62-98A4-4227-A5C6-338E33539477} = {7E5CADD2-3EC3-4A00-9F20-464EB935E8A6}
+		{F6EE4187-3BDB-4BE2-AD23-AB062260BFC8} = {D4A5B676-DF4C-4E4E-BEBF-FDE8974248DD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {859731E2-9481-422F-A703-95B0F0E14304}
+	EndGlobalSection
+EndGlobal
