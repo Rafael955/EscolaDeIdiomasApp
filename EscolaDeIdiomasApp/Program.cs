@@ -10,10 +10,13 @@ builder.Services.AddRouting(configureOptions =>
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddCorsConfiguration();
 
 builder.Services.AddDependencyInjection();
 
 var app = builder.Build();
+
+app.UserCorsConfiguration();
 
 if (app.Environment.IsDevelopment())
 {
