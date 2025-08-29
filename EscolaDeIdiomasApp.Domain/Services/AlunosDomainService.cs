@@ -34,7 +34,7 @@ namespace EscolaDeIdiomasApp.Domain.Services
                 Turma? turma = turmasRepository.GetById(idTurma);
 
                 if (alunoTurmasRepository.VerifyIfClassIsAlreadyFull(idTurma))
-                    throw new ApplicationException($"O aluno {aluno.Nome} não poderá se matricular na turma {turma.Numero} pois ela já está cheia.");
+                    throw new ApplicationException($"O aluno {request.Nome} não poderá se matricular na turma {turma.Numero} pois ela já está cheia.");
             }
 
             aluno = new Aluno

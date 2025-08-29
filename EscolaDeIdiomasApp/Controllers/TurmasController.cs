@@ -130,6 +130,15 @@ namespace EscolaDeIdiomasApp.Api.Controllers
             }
         }
 
+        [HttpGet("listar-niveis-turmas")]
+        [ProducesResponseType(typeof(NivelTurmaDto), StatusCodes.Status200OK)]
+        public IActionResult GetClassesLevels()
+        {
+            var result = turmasDomainService.ListarNiveisDasTurmas();
+
+            return StatusCode(StatusCodes.Status200OK, result);
+        }
+
         [HttpGet("listar-turmas")]
         [ProducesResponseType(typeof(TurmaResponseDto), StatusCodes.Status200OK)]
         public IActionResult GetAll()

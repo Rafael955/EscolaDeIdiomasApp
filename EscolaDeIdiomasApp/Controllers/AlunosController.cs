@@ -136,7 +136,7 @@ namespace EscolaDeIdiomasApp.Api.Controllers
             }
         }
 
-        [HttpDelete("remover-aluno-turma/{id}")]
+        [HttpPost("remover-aluno-turma/{id}")]
         [ProducesResponseType(typeof(AlunoResponseDto), StatusCodes.Status200OK)]
         public IActionResult RemoveFromClass(Guid id, [FromBody] AlunoTurmasRequestDto request)
         {

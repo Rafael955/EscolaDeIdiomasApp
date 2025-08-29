@@ -8,8 +8,8 @@ namespace EscolaDeIdiomasApp.Domain.Enums
 {
     public enum NivelTurma
     {
-        BASICO,
-        INTERMEDIARIO,
-        AVANCADO
+        BÁSICO,
+        INTERMEDIÁRIO,
+        AVANÇADO
     }
 }

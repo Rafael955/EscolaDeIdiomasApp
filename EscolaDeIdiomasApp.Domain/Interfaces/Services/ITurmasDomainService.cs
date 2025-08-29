@@ -14,5 +14,7 @@ namespace EscolaDeIdiomasApp.Domain.Interfaces.Services
         TurmaResponseDto ObterTurmaPorId(Guid id);
 
         List<TurmaResponseDto>? ListarTurmas();
+
+        List<NivelTurmaDto>? ListarNiveisDasTurmas();
     }
 }

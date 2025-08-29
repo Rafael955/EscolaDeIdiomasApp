@@ -24,14 +24,14 @@ namespace EscolaDeIdiomasApp.Domain.Services
             if (!RequestValidationHelper.IsRequestValidationsOk(request, out errors))
                 throw new ValidationException($"{errors}");
 
-            if (turmasRepository.ClassNumberAlreadyExists(request.Numero, out turma))
+            if (turmasRepository.ClassNumberAlreadyExists(Convert.ToInt32(request.Numero), out turma))
                 throw new ApplicationException($"Já existe uma turma cadastrada com este número!");
 
             turma = new Turma
             {
-                Numero = request.Numero,
-                Ano = request.Ano,
-                NivelTurma = (NivelTurma)request.NivelTurma
+                Numero = Convert.ToInt32(request.Numero),
+                Ano = Convert.ToInt32(request.Ano),
+                NivelTurma = (NivelTurma)Convert.ToInt32(request.NivelTurma)
             };
 
             turmasRepository.Add(turma);
@@ -53,14 +53,14 @@ namespace EscolaDeIdiomasApp.Domain.Services
             if (!RequestValidationHelper.IsRequestValidationsOk(request, out errors))
                 throw new ValidationException($"{errors}");
 
-            if (turmasRepository.ClassNumberAlreadyExists(request.Numero, out turma) && turma != null && turma.Id != id)
+            if (turmasRepository.ClassNumberAlreadyExists(Convert.ToInt32(request.Numero), out turma) && turma != null && turma.Id != id)
                 throw new ApplicationException($"Já existe uma turma cadastrada com este número!");
 
             turma = new Turma
             {
-                Numero = request.Numero,
-                Ano = request.Ano,
-                NivelTurma = (NivelTurma)request.NivelTurma
+                Numero = Convert.ToInt32(request.Numero),
+                Ano = Convert.ToInt32(request.Ano),
+                NivelTurma = (NivelTurma)Convert.ToInt32(request.NivelTurma)
             };
 
             turmasRepository.Add(turma);
@@ -138,6 +138,18 @@ namespace EscolaDeIdiomasApp.Domain.Services
             }
 
             return response;
+        }
+
+        public List<NivelTurmaDto>? ListarNiveisDasTurmas()
+        {
+            return Enum.GetValues(typeof(NivelTurma))
+                        .Cast<NivelTurma>()
+                        .Select(nivel => new NivelTurmaDto
+                        {
+                            Codigo = (int)nivel,
+                            Descricao = nivel.ToString()
+                        })
+                        .ToList();
         }
     }
 }
